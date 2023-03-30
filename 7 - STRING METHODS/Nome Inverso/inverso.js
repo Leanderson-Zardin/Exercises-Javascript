@@ -3,9 +3,9 @@ let novaFrase = "";
 
 for (let i = 0; i < frase.length; i++) {
   if(i == 0) {
-      continue;
+     continue;
   } else {
-      novaFrase += frase[frase.length - i]
+     novaFrase += frase[frase.length - i]
   }
 }
 

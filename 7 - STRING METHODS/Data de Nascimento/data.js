@@ -1,5 +1,7 @@
 let data = prompt("Digite uma data", "dd/mm/aaaa");
 let mes = data.substring(3, 5);
+let dia = data.substring(0, 2);
+let ano = data.slice(6);
 
 switch(mes) {
   case "01":
@@ -38,7 +40,17 @@ switch(mes) {
   case "12":
     mes = "de Dezembro de";
     break;
-}
+  }
 
 let newDate = data.substring(0, 2) + " " + mes + " " + data.slice(-4);
 alert(newDate)
+
+function validacao(data) {
+  if(data[2] === "/" && data[5] === "/") {
+    return "Barras Corretas!"
+  }
+  return "Barras Incorretas!";
+}
+
+alert( validacao(data) );
+alert(dia + " - " + mes + " - " + ano);
